@@ -1,0 +1,254 @@
+*,html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #02020A; */
+    /* color: white; */
+    letter-spacing: 0.05em;
+    padding-top: 90px;
+    background-color: #FCF9FA;
+}
+nav {
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around;
+    align-items: center; */
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.page-logo-wrapper {
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 3px solid #E31A57; */
+    outline: 2px dashed #E31A57;
+    outline-offset: 5px;
+    background-color: #E31A57;
+    color: white;
+    padding: 7px 16px;
+    cursor: pointer;
+}
+.page-logo-wrapper .left {
+    font-size: 26px;
+    margin-right: 15px;
+    color: white;
+}
+.page-logo-wrapper .right {
+    font-size: 20px;
+    line-height: 0.8em;
+    font-weight: bolder;
+    font-family: 'Megrim', sans-serif;
+    /* color: #E31A57; */
+    
+}
+.page-logo-wrapper .right span {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+nav .login-user {
+    position: fixed;
+    bottom: 70px;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 13px;
+    text-align: center;
+    user-select: none;
+}
+nav .login-user span {
+    font-weight: bold;
+}
+
+nav .tab-wrapper {
+    width: 100%;
+    /* margin-top: 50px; */
+}
+nav .tab-wrapper .tab {
+    margin: 60px 0;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    /* opacity: 0.5; */
+    /* font-weight: 300; */
+}
+nav .tab-wrapper .active-tab {
+    font-weight: bold;
+    opacity: 1;
+    color: #E31A57;
+}
+nav .tab-wrapper .tab i {
+    font-size: 20px;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+nav .tab-wrapper .new-order-number {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #E31A57;
+    color: white;
+}
+
+
+
+/* Styles for main wrapper... */
+.main-wrapper {
+    width: calc( 100% - 250px );
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.main-wrapper .title {
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.main-wrapper .box-wrapper {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main-wrapper .box-wrapper .box {
+    width: 530px;
+    height: 270px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* margin-right: 20px;
+    margin-bottom: 20px; */
+    /* margin: 15px; */
+    margin: 0 15px 15px 0;
+    position: relative;
+}
+.main-wrapper .box-wrapper .box .float-text {
+    font-size: 16px;
+    /* text-decoration: underline; */
+    border-bottom: 3px solid #E31A57;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #E31A57;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.main-wrapper .box-wrapper .box .icon-wrapper {
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+    color: #E31A57;
+    background-color: #F9EEF2;
+    display: grid;
+    place-items: center;
+    border-radius: 3px;
+}
+.main-wrapper .box-wrapper .box .title-wrapper {
+    font-size: 18px;
+    color: grey;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed #E31A57;
+}
+.main-wrapper .box-wrapper .box .number-wrapper {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    /* color: #000000; */
+}
+.main-wrapper .box-wrapper .box .number-wrapper .new-order {
+    font-size: 16px;
+    color: green;
+    margin-left: 10px;
+    font-weight: normal;
+}
+.main-wrapper .box-wrapper .box .sub-text {
+    font-size: 14px;
+}
+
+
+.recent-orders-title {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 30px 0 20px 0;
+}
+.recent-order-table {
+    width: 100%;
+}
+.recent-order-table tr td , th{
+    border-bottom: 1px solid #E2E2E2;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+.recent-order-table tr th {
+    border-bottom-color: #CDCDCD;
+    border-bottom-width: 2px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.recent-order-table tr .status{
+    padding: 6px 16px;
+    box-sizing: border-box;
+    background-color: #DBF2D7;
+    color: #31AB1C;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.recent-order-table tr .pending-status {
+    color: white !important;
+    background-color: orange !important;
+}
+.recent-order-table tr .declined-status {
+    color: white !important;
+    background-color: red !important;
+}
+.copyright-wrapper {
+    font-size: 14px;
+    /* margin-top: 50px; */
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright-wrapper span {
+    font-weight: 500;
+    color: #E31A57;
+}

@@ -1,0 +1,1111 @@
+.trailer-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(5%);
+    opacity: 0;
+    display: none;
+    transition: all 0.5s;
+
+}
+.trailer-wrapper .iframe-wrapper {
+    width: 800px;
+    height: 450px;
+    position: relative;
+}
+.trailer-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-image: linear-gradient(to right, #E31A57 , orange) 1;
+    border-width: 3px;
+    border-style: solid;
+}
+.trailer-wrapper .iframe-wrapper .close-button {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: linear-gradient(to right, #ff004c , orange);
+    color: white;
+    bottom: -70px;
+    left: 3px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#game-detail-wrapper {
+    width: 80%;
+    margin: 70px auto;
+    position: relative;
+}
+.game-images-and-info-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-images-wrapper {
+    width: 1350px;
+    height: 800px;
+    /* background-color: red; */
+    /* background-size: cover;
+    background-position: center; */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #1D1D1D;
+    position: relative;
+}
+.game-images-wrapper .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 30;
+    transition: all 0.3s;
+}
+.game-images-wrapper .info-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+    /* backdrop-filter: brightness(60%); */
+    background: linear-gradient(to right, black, transparent);
+    /* background: linear-gradient(45deg, black, transparent); */
+    position: absolute;
+    z-index: 40;
+}
+.game-images-wrapper .info-wrapper .game-title {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.game-images-wrapper .info-wrapper .genre,
+.game-images-wrapper .info-wrapper .download-size {
+    font-size: 14px;
+    color: #C4C4C4;
+    margin: 5px 0;
+}
+.game-images-wrapper .info-wrapper .genre span {
+    color: white;
+}
+.game-images-wrapper .info-wrapper .download-size span {
+    color: #E31A57;
+    font-weight: bolder;
+}
+
+.game-images-wrapper .info-wrapper .button-wrapper {
+    margin-top: 30px;
+    display: flex;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .button {
+    padding: 13px 30px;
+    /* border: 1px solid white; */
+    margin-right: 20px;
+    cursor: pointer;
+    /* font-weight: bold; */
+    border-radius: 2px;
+    font-size: 14px;
+    transition: all 0.4s;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .add-to-cart-button {
+    background-color: #E31A57;
+    background: linear-gradient(to right, #E31A57 , orange);
+    /* display: none; */
+}
+.game-images-wrapper .info-wrapper .button-wrapper .add-to-cart-button:hover {
+    background-color: #be1e4e;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .watch-trailer-button {
+    border: 1px solid white;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .watch-trailer-button i {
+    outline: 1px dashed white;
+    outline-offset: 3px;
+    border-radius: 50px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .watch-trailer-button:hover {
+    background-color: white;
+    color: black;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .watch-trailer-button:hover i {
+    outline-color: black;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .purchased-button {
+    /* background-color: #f05483;
+    color: white; */
+    border: 1px solid #E31A57;
+    color: #ff004c;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: auto;
+    display: none;
+}
+.game-images-wrapper .info-wrapper .button-wrapper .purchased-button i {
+    font-size: 17px;
+}
+
+.game-images-wrapper .thumbnail-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 750px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    /* backdrop-filter: blur(100px); */
+    backdrop-filter: brightness(50%);
+    z-index: 40;
+}
+.game-images-wrapper .thumbnail-wrapper img {
+    width: 18%;
+    min-width: 15%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s;
+}
+.game-images-wrapper .thumbnail-wrapper .current-image {
+    /* border-color: white; */
+    border-image: linear-gradient(to right, #E31A57 , orange) 1;
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+.game-info-wrapper {
+    width: 600px;
+    height: auto;
+}
+/* .game-info-wrapper .add-to-cart-button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+} */
+.game-info-wrapper .title {
+    font-size: 40px;
+    font-weight: 500;
+}
+.game-info-wrapper .genre-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.game-info-wrapper .genre-wrapper .genre {
+    padding: 5px 10px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.game-info-wrapper .info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.game-info-wrapper .info .type {
+    opacity: 0.6;
+    padding-right: 50px ;
+}
+.game-info-wrapper .info .value {
+    color: white;
+}
+.game-info-wrapper .download-link-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.game-info-wrapper .download-link-title span {
+    font-size: 16px;
+    opacity: 0.5;
+}
+.game-info-wrapper .locked-wrapper {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    /* display: none; */
+}
+.game-info-wrapper .locked-wrapper i {
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 100%;
+    /* border: 1px solid white; */
+    background-color: #2b2b2b;
+}
+.game-info-wrapper .locked-wrapper .hint {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: lighter;
+    text-align: center;
+    width: 80%;
+    line-height: 1.5em;
+    display: none;
+}
+
+.game-info-wrapper .link-wrapper {
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    background-color: rgb(22, 22, 22);
+    /* border: 1px solid white; */
+    /* border-image: linear-gradient(to right, #E31A57 , orange) 1;
+    border-width: 2px;
+    border-style: solid; */
+    /* background: linear-gradient(to right bottom , #ff004c , orange); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    display: none;
+}
+.game-info-wrapper .link-wrapper .link {
+    padding: 7px 10px;
+    font-size: 13px;
+    background: linear-gradient(to right  , #ff004c, orange);
+    background-color: #ff004c;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 10px 0;
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* System requirements styles.................................... */
+.system-requirement-title {
+    margin-top: 50px;
+    font-size: 28px;
+    border-left: 4px solid #ff004c;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.system-requirement-title span {
+    font-size: 20px;
+    opacity: 0.5;
+    margin-left: 5px;
+}
+
+.system-requirement-wrapper {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.system-requirement-wrapper .spec-wrapper {
+    width: 48%;
+}
+.system-requirement-wrapper .title {
+    font-size: 20px;
+    /* opacity: 0.7; */
+    margin-bottom: 30px;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #ff004c;
+    display: inline-block;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+.system-requirement-wrapper .sys-info {
+    margin-bottom: 20px;
+}
+.system-requirement-wrapper .type {
+    font-size: 15px;
+    opacity: 0.6;
+    margin-bottom: 3px;
+}
+.system-requirement-wrapper .value {
+    font-size: 17px;
+}
+
+/* Splitter styles.................... */
+.splitter {
+    margin-top: 70px;
+    width: 100%;
+    height: 1px;
+    background-color: #2b2b2b;
+}
+
+/* Related game wrapper styles..................................... */
+.related-games-title {
+    font-size: 30px;
+    padding-left: 10px;
+    border-left: 4px solid #ff2466;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.related-games-wrapper .game-wrapper {
+    width: 350px;
+    min-width: 350px;
+    height: 300px;
+    min-height: 300px;
+    /* background-color: red; */
+    /* border: 1px solid #292929; */
+    cursor: pointer;
+    position: relative;
+    /* margin: auto; */
+    margin: 5px 0;
+}
+.related-games-wrapper .game-wrapper .status-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 50;
+}
+.related-games-wrapper .game-wrapper .status-wrapper .status {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: black;
+    margin: 3px 0;
+    font-size: 11px;
+    font-weight: bold;
+    border-left: 5px solid white;
+    text-transform: uppercase;
+    width: fit-content;
+}
+.related-games-wrapper .game-wrapper .status-wrapper .online-status {
+    background: linear-gradient(to right, #0CA423, #09B44C);
+    /* display: none; */
+}
+.related-games-wrapper .game-wrapper .status-wrapper .purchased-status {
+    background: linear-gradient(to right, #C11E4F, #ff2466);
+}
+
+.related-games-wrapper .game-image-wrapper {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    position: relative;
+}
+.related-games-wrapper .game-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.related-games-wrapper .game-wrapper:hover img {
+    transform: scale(1.15);
+    filter: blur(5px);
+}
+.related-games-wrapper .game-image-wrapper .genre-wrapper {
+    display: flex;
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+}
+.related-games-wrapper .game-image-wrapper .genre-wrapper .genre {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    margin: 0 3px;
+    background-color: #303030;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.related-games-wrapper .game-image-wrapper .genre-wrapper .genre:first-child {
+    margin-left: 0;
+}
+.related-games-wrapper .game-info-wrapper {
+    width: 100%;
+    height: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.related-games-wrapper .game-info-wrapper .game-title {
+    font-size: 17px;
+    font-weight: bolder;
+}
+.related-games-wrapper .game-info-wrapper .game-spec {
+    font-size: 13px;
+    margin-top: 5px;
+}
+.related-games-wrapper .game-info-wrapper .game-spec span {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #E31A57;
+}
+.related-games-wrapper .game-info-wrapper .genre {
+    font-size: 13px;
+    margin-top: 5px;
+}
+.related-games-wrapper .game-wrapper .overlay-wrapper {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    /* backdrop-filter: blur(5px); */
+    /* backdrop-filter: brightness(10%); */
+    /* background-color: #ff2466; */
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 60;
+}
+.related-games-wrapper .game-wrapper:hover .overlay-wrapper {
+    opacity: 1;
+}
+.related-games-wrapper .game-wrapper .overlay-wrapper div {
+    padding: 15px 20px;
+    /* border: 1px solid white; */
+    margin: 0 10px;
+    background-color: white;
+    color: #E31A57;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.5s;
+    /* border: 3px solid #E31A57; */
+}
+.related-games-wrapper .game-wrapper .overlay-wrapper .add-to-cart-button {
+    /* display: none; */
+    background-color: #ff2466;
+    color: white;
+}
+.related-games-wrapper .game-wrapper .overlay-wrapper .purchased-button {
+    background-color: #fcdde8;
+    background-color: transparent;
+    background-color: #E31A57;
+    border: 3px solid #ff2466;
+    outline: 1px dashed #ff2466;
+    outline-offset: 2px;
+    color: white;
+    display: none;
+}
+.related-games-wrapper .game-wrapper .overlay-wrapper div:hover {
+    background-color: #E31A57;
+    color: white;
+}
+
+
+/* Media query styles............................................ */
+@media only screen and (max-width: 2300px) {
+    #game-detail-wrapper {
+        width: 90%;
+    }
+    .game-images-wrapper {
+        width: 1100px;
+        height: 620px;
+    }
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 35px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 12px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 670px;
+        height: 75px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .game-info-wrapper {
+        width: 550px;
+    }
+    .game-info-wrapper .title {
+        font-size: 33px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 11px;
+    }
+    .game-info-wrapper .info {
+        font-size: 17px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 17px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
+
+@media only screen and (max-width: 1850px) {
+    #game-detail-wrapper {
+        width: 95%;
+    }
+    .game-images-wrapper {
+        width: 900px;
+        height: 550px;
+    }
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 30px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 12px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 13px;
+        padding: 11px 20px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 600px;
+        height: 68px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .game-info-wrapper {
+        width: 500px;
+    }
+    .game-info-wrapper .title {
+        font-size: 28px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 12px;
+        margin-bottom: 40px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 10px;
+    }
+    .game-info-wrapper .info {
+        font-size: 15px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 15px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .system-requirement-title {
+        font-size: 23px;
+    }
+    .system-requirement-wrapper .title {
+        font-size: 18px;
+    }
+    .system-requirement-wrapper .type {
+        font-size: 15px;
+    }
+    .system-requirement-wrapper .value {
+        font-size: 16px;
+    }
+
+    .related-games-title {
+        font-size: 23px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-title {
+        font-size: 15px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec {
+        font-size: 12px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec span {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 1580px) {
+    #game-detail-wrapper {
+        width: 97%;
+    }
+    .game-images-wrapper {
+        width: 800px;
+        height: 470px;
+    }
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 25px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 11px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 12px;
+        padding: 10px 17px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button i {
+        font-size: 15px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 550px;
+        height: 60px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .game-info-wrapper {
+        width: 480px;
+    }
+    .game-info-wrapper .title {
+        font-size: 22px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 12px;
+        margin-bottom: 35px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 9px;
+    }
+    .game-info-wrapper .info {
+        font-size: 13px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 13px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    .system-requirement-title {
+        font-size: 23px;
+    }
+    .system-requirement-wrapper .title {
+        font-size: 18px;
+    }
+    .system-requirement-wrapper .type {
+        font-size: 15px;
+    }
+    .system-requirement-wrapper .value {
+        font-size: 16px;
+    }
+
+    .related-games-title {
+        font-size: 23px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-title {
+        font-size: 15px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec {
+        font-size: 12px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec span {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1330px) {
+    #game-detail-wrapper {
+        width: 85%;
+    }
+    .game-images-and-info-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-images-wrapper {
+        width: 100%;
+        height: 650px;
+    }
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 30px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 14px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 15px;
+        padding: 13px 21px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button i {
+        font-size: 17px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 750px;
+        height: 80px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .game-info-wrapper {
+        width: 100%;
+    }
+    .game-info-wrapper .title {
+        font-size: 27px;
+        margin-top: 50px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 12px;
+        margin-bottom: 35px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 11px;
+    }
+    .game-info-wrapper .info {
+        font-size: 15px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 15px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 11px;
+        padding: 4px 7px;
+    }
+
+    .system-requirement-title {
+        font-size: 23px;
+    }
+    .system-requirement-wrapper .title {
+        font-size: 18px;
+    }
+    .system-requirement-wrapper .type {
+        font-size: 15px;
+    }
+    .system-requirement-wrapper .value {
+        font-size: 16px;
+    }
+
+    .related-games-title {
+        font-size: 23px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-title {
+        font-size: 15px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec {
+        font-size: 12px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec span {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #game-detail-wrapper {
+        width: 90%;
+    }
+    .game-images-and-info-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-images-wrapper {
+        width: 100%;
+        height: 450px;
+    }
+    .game-images-wrapper .info-wrapper {
+        width: 70%;
+    }
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 22px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 11px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button i {
+        font-size: 17px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 650px;
+        height: 65px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .game-info-wrapper {
+        width: 100%;
+    }
+    .game-info-wrapper .title {
+        font-size: 19px;
+        margin-top: 50px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 12px;
+        margin-bottom: 35px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 9px;
+    }
+    .game-info-wrapper .info {
+        font-size: 14px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 14px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    .system-requirement-title {
+        font-size: 18px;
+    }
+    .system-requirement-wrapper {
+        flex-direction: column;
+    }
+    .system-requirement-wrapper .spec-wrapper {
+        width: 100%;
+    }
+    .system-requirement-wrapper .spec-wrapper .title {
+        display: inline-block;
+        width: 100%;
+    }
+    .system-requirement-wrapper .spec-wrapper div {
+        text-align: center;
+    }
+    .system-requirement-wrapper .title {
+        font-size: 16px;
+    }
+    .system-requirement-wrapper .type {
+        font-size: 13px;
+    }
+    .system-requirement-wrapper .value {
+        font-size: 14px;
+    }
+
+    .related-games-title {
+        font-size: 18px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-title {
+        font-size: 14px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec {
+        font-size: 11px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec span {
+        font-size: 13px;
+    }
+
+    .trailer-wrapper .iframe-wrapper {
+        width: 700px;
+        height: 380px;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    #game-detail-wrapper {
+        width: 95%;
+        margin: 40px auto;
+    }
+    .game-images-wrapper {
+        height: 450px;
+    }
+    .game-images-wrapper .info-wrapper {
+        width: 70%;
+    }
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 19px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 11px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button i {
+        font-size: 13px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 550px;
+        height: 57px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .game-info-wrapper {
+        width: 100%;
+    }
+    .game-info-wrapper .title {
+        font-size: 17px;
+        margin-top: 50px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 11px;
+        margin-bottom: 30px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 9px;
+    }
+    .game-info-wrapper .info {
+        font-size: 14px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 14px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    .system-requirement-title {
+        font-size: 18px;
+    }
+    .system-requirement-wrapper .title {
+        font-size: 16px;
+    }
+    .system-requirement-wrapper .type {
+        font-size: 13px;
+    }
+    .system-requirement-wrapper .value {
+        font-size: 14px;
+    }
+
+    .related-games-title {
+        font-size: 18px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-title {
+        font-size: 14px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec {
+        font-size: 11px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec span {
+        font-size: 13px;
+    }
+    .trailer-wrapper .iframe-wrapper {
+        width: 500px;
+        height: 280px;
+    }
+    .trailer-wrapper .iframe-wrapper .close-button {
+        font-size: 16px;
+        height: 45px;
+        bottom: -60px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .game-images-wrapper {
+        height: 250px;
+    }
+    .game-images-wrapper .info-wrapper {
+        width: 85%;
+        padding-left: 20px;
+    }
+    
+    .game-images-wrapper .info-wrapper .game-title {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .game-images-wrapper .info-wrapper .genre,
+    .game-images-wrapper .info-wrapper .download-size {
+        font-size: 10px;
+        display: none;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper {
+        margin-top: 5px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button {
+        font-size: 11px;
+        padding: 9px 11px;
+    }
+    .game-images-wrapper .info-wrapper .button-wrapper .button i {
+        font-size: 10px;
+    }
+    .game-images-wrapper .thumbnail-wrapper {
+        width: 350px;
+        height: 35px;
+        bottom: 5px;
+        right: 5px;
+    }
+    .game-info-wrapper {
+        width: 100%;
+    }
+    .game-info-wrapper .title {
+        font-size: 17px;
+        margin-top: 30px;
+    }
+    .game-info-wrapper .genre-wrapper {
+        margin-top: 11px;
+        margin-bottom: 30px;
+    }
+    .game-info-wrapper .genre-wrapper .genre {
+        font-size: 8px;
+    }
+    .game-info-wrapper .info {
+        font-size: 13px;
+    }
+    .game-info-wrapper .download-link-title {
+        font-size: 14px;
+    }
+    .game-info-wrapper .link-wrapper .link {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    .system-requirement-title {
+        font-size: 18px;
+    }
+    .system-requirement-wrapper .title {
+        font-size: 16px;
+    }
+    .system-requirement-wrapper .type {
+        font-size: 13px;
+    }
+    .system-requirement-wrapper .value {
+        font-size: 13px;
+    }
+
+    .related-games-title {
+        font-size: 18px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-title {
+        font-size: 14px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec {
+        font-size: 11px;
+    }
+    .related-games-wrapper .game-info-wrapper .game-spec span {
+        font-size: 13px;
+    }
+
+    .trailer-wrapper .iframe-wrapper {
+        width: 95%;
+        height: 250px;
+    }
+    .trailer-wrapper .iframe-wrapper .close-button {
+        font-size: 16px;
+        height: 45px;
+        bottom: -60px;
+    }
+    
+}

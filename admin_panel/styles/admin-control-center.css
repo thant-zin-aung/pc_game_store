@@ -1,0 +1,184 @@
+.control-center-wrapper {
+    width: 100%;
+    background-color: white;
+    margin-top: 40px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.control-center-wrapper .control-center-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.control-center-wrapper .input-group-wrapper {
+    /* margin-top: 30px; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.control-center-wrapper .input-group-wrapper .input-group {
+    margin-right: 50px;
+    /* margin-bottom: 40px; */
+    margin-top: 30px;
+}
+.control-center-wrapper .input-group-wrapper .input-group .label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #5D5D5D;
+    margin-bottom: 10px;
+}
+.control-center-wrapper .input-group-wrapper .input-group input[type=text] {
+    border: 1px solid #BDBDBD;
+    outline: none;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 400;
+}
+.control-center-wrapper .input-group-wrapper .input-group .permission-group {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+.control-center-wrapper .input-group-wrapper .input-group .permission-group input[type=checkbox] {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    accent-color: #E31A57;
+}
+.control-center-wrapper .input-group-wrapper .input-group .permission-group label {
+    margin-right: 40px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15px;
+    /* font-weight: 500; */
+}
+.create-button {
+    width: 110px;
+    height: 40px;
+    background-color: #E31A57;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+.create-button i {
+    margin-right: 5px;
+}
+
+
+.control-center-wrapper .admin-list-and-permission-wrapper .admin-list-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 60px;
+}
+
+.admin-list-and-permission-table {
+    width: 100%;
+    margin-top: 10px;
+}
+.admin-list-and-permission-table tr td , th{
+    border-bottom: 1px solid #E2E2E2;
+    padding: 18px 0;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 15px;
+}
+.admin-list-and-permission-table tr th {
+    border-bottom-color: #CDCDCD;
+    border-bottom-width: 2px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.admin-list-and-permission-table .permission {
+    text-align: center;
+}
+.admin-list-and-permission-table .action-column {
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.admin-list-and-permission-table .permission i {
+    font-size: 17px;
+}
+.admin-list-and-permission-table .allowed-permission {
+    color: #1BC024;
+}
+.admin-list-and-permission-table .disallowed-permission {
+    color: red;
+}
+.admin-list-and-permission-table .delete-admin-button {
+    width: 100px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(212, 0, 0);
+    color: white; */
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+}
+.admin-list-and-permission-table .delete-admin-button:hover {
+    background-color: rgb(212, 0, 0);
+    background-color: red;
+    color: white;
+}
+.admin-list-and-permission-table .delete-admin-button i {
+    margin-right: 5px;
+}
+
+/* // Admin login and action table style changes.... */
+
+.admin-login-action-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.admin-login-action-title-wrapper .filter-wrapper {
+    padding: 7px 20px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 1px #BDBDBD;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.admin-login-action-title-wrapper .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0;
+}
+.admin-login-action-table {
+    width: 100%;
+    margin-top: 10px;
+}
+.admin-login-action-table tr td , th{
+    border-bottom: 1px solid #E2E2E2;
+    padding: 18px 0;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 15px;
+}
+.admin-login-action-table tr th {
+    border-bottom-color: #CDCDCD;
+    border-bottom-width: 2px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.admin-login-action-table .event {
+    width: 500px;
+}

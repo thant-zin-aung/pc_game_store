@@ -1,0 +1,227 @@
+.add-genre-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(5%);
+    display: none;
+}
+.add-genre-wrapper .genre-type-box {
+    width: 400px;
+    height: 50px;
+    font-size: 18px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.add-genre-wrapper .button {
+    background-color: #E31A57;
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+.add-genre-wrapper .close-button {
+    background: linear-gradient(to right, #E31A57, orange);
+}
+
+.game-detail-wrapper {
+    width: 100%;
+    margin-top: 40px;
+    background-color: white;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.game-detail-wrapper .add-new-game-button {
+    padding: 13px 20px;
+    box-shadow: 1px 1px 8px 1px #b8b8b8;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.game-detail-wrapper .game-username {
+    font-size: 25px;
+    font-weight: bold;
+}
+.game-detail-wrapper .game-id {
+    font-size: 19px;
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+.game-detail-wrapper .detail-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.game-detail-wrapper .detail-wrapper .detail {
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+.game-detail-wrapper .detail-wrapper .detail .type {
+    font-size: 15px;
+    /* font-weight: 500; */
+    /* opacity: 0.8; */
+    color: #3f3f3f;
+}
+.game-detail-wrapper .detail-wrapper .detail .value {
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.game-detail-wrapper .detail-wrapper .detail .genre-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.game-detail-wrapper .detail-wrapper .detail .genre-wrapper .genre {
+    margin-right: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 1px #d3d3d3;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.game-detail-wrapper .add-genre-button {
+    padding: 5px 7px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #E31A57;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.game-detail-wrapper .login-history-title {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-detail-wrapper .login-history-title .title {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 0;
+}
+.game-detail-wrapper .login-history-title .search-wrapper {
+    /* background-color: #b8b8b8; */
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-detail-wrapper .login-history-title .search-wrapper input[type=text]{
+    width: 300px;
+    height: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #E5E5E5;
+}
+.game-detail-wrapper .login-history-title .search-wrapper input[type=submit]{
+    width: 100px;
+    height: 100%;
+    background-color: #E31A57;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Game list style........... */
+.game-list-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+.game-list-wrapper .game-wrapper {
+    width: 180px;
+    height: 150px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.game-list-wrapper .game-wrapper img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.game-list-wrapper .game-wrapper .game-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+    
+}
+.game-detail-wrapper .game-wrapper .button-wrapper {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(30%);
+    opacity: 0;
+    transition: all 0.4s;
+}
+.game-list-wrapper .game-wrapper:hover .button-wrapper {
+    opacity: 1;
+}
+.game-detail-wrapper .game-wrapper .button-wrapper .button {
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+.game-detail-wrapper .game-wrapper .button-wrapper .detail-button {
+    /* background-color: #0BABE3; */
+    background-color: white;
+    color: black;
+    color: #E31A57;
+}
+.game-detail-wrapper .game-wrapper .button-wrapper .delete-button {
+    background-color: red;
+}

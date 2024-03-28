@@ -1,0 +1,62 @@
+.customer-table {
+    width: 100%;
+    margin-top: 30px;
+}
+.customer-table tr td , th{
+    border-bottom: 1px solid #E2E2E2;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+.customer-table tr th {
+    border-bottom-color: #CDCDCD;
+    border-bottom-width: 2px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.customer-table tr .status{
+    padding: 6px 16px;
+    box-sizing: border-box;
+    background-color: #DBF2D7;
+    color: #31AB1C;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.customer-table tr .total-game span,
+.customer-table tr .amount-spent span {
+    font-weight: bold;
+}
+
+.customer-table tr .view-detail-button {
+    padding: 12px 10px;
+    background-color: rgb(240, 223, 223);
+    font-size: 14px;
+    font-weight: 500;
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.customer-table tr .view-detail-button:hover {
+    background-color: #ece7e7;
+}
+.customer-table tr .payment-type-wrapper {
+    display: flex;
+    align-items: center;
+}
+.customer-table tr .payment-type img {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.customer-table tr .pending-status {
+    color: rgb(255, 123, 0);
+    background-color: rgb(250, 235, 203);
+}
+.customer-table tr .declied-status {
+    color: red;
+    background-color: rgb(248, 223, 223);
+}

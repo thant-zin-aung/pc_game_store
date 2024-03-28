@@ -1,0 +1,93 @@
+.ad-blocker-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.ad-blocker-wrapper .description {
+    width: 1500px;
+    text-align: center;
+}
+.ad-blocker-wrapper .go-to-ad-blocker-button {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #E31A57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.ad-blocker-wrapper .ad-blocker-image-wrapper {
+    width: 1000px;
+    height: 200px;
+}
+.ad-blocker-wrapper .ad-blocker-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid white;
+}
+.ad-blocker-wrapper .game-download-screenshot-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.ad-blocker-wrapper .game-download-screenshot-wrapper img {
+    width: 1000px;
+    height: auto;
+    border: 3px solid white;
+    margin-top: 50px;
+}
+
+
+/* Media queries styles............................... */
+@media only screen and (max-width: 1920px) {
+    .main-wrapper {
+        width: 96%;
+    }
+    .ad-blocker-wrapper .description {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .ad-blocker-wrapper .ad-blocker-image-wrapper {
+        width: 100%;
+        height: 300px;
+    }
+    .ad-blocker-wrapper .game-download-screenshot-wrapper img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+    .ad-blocker-wrapper .ad-blocker-image-wrapper {
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .ad-blocker-wrapper .ad-blocker-image-wrapper {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ad-blocker-wrapper .description {
+        font-size: 14px;
+    }
+    .ad-blocker-wrapper .go-to-ad-blocker-button {
+        font-size: 15px;
+        width: 200px;
+        height: 45px;
+    }
+    .ad-blocker-wrapper .ad-blocker-image-wrapper {
+        width: 100%;
+        height: 100px;
+    }
+    .ad-blocker-wrapper .game-download-screenshot-wrapper img {
+        width: 100%;
+    }
+}

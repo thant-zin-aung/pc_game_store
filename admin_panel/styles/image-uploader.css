@@ -1,0 +1,85 @@
+.uploader-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.uploader-wrapper .left-wrapper,
+.uploader-wrapper .right-wrapper {
+    background-color: white;
+    margin: 0 20px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.uploader-wrapper .left-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.uploader-wrapper .left-wrapper .input-wrapper input {
+    display: none;
+}
+.uploader-wrapper .left-wrapper .input-wrapper label {
+    display: inline-block;
+    padding: 20px 100px;
+    /* background-color: red; */
+    border: 2px dashed #9A9A9A;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #666666;
+}
+.uploader-wrapper .left-wrapper .game-title-box {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 30px 0;
+    border: 2px solid #9A9A9A;
+    outline: none;
+}
+.uploader-wrapper .left-wrapper .upload-button {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 30px; */
+    background-color: #E31A57;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.uploader-wrapper .left-wrapper .wait-label {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 30px;
+    color: orangered;
+    display: none;
+}
+
+.uploader-wrapper .right-wrapper textarea {
+    font-family: 'Roboto', sans-serif;
+    width: 700px;
+    height: 350px;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #C8C8C8;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    background-color: white;
+    border-radius: 10px;
+    line-height: 1.5em;
+}
+.uploader-wrapper .right-wrapper .output-link-title {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}

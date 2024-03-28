@@ -1,0 +1,37 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.my-game-library-wrapper {
+    margin: 50px auto;
+    width: 97%;
+}
+.my-game-library-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sale-wrapper .game-wrapper .overlay-wrapper .purchased-button {
+    display: inline-block;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    opacity: 0.1;
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.5s;
+}
+nav {
+    backdrop-filter: blur(50px);
+    background-color: transparent;
+}

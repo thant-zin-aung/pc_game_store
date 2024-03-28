@@ -1,0 +1,76 @@
+.edit-save-button-wrapper .save-button {
+    display: flex;
+    border: none;
+}
+.game-detail-wrapper .game-detail-title {
+    display: flex;
+    justify-content: space-between;
+}
+.game-detail-wrapper .game-detail-title .title {
+    font-size: 27px;
+    font-weight: 500;
+    margin-top: 0;
+}
+.game-detail-wrapper .game-detail-title .is-online-wrapper {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+.game-detail-wrapper .game-detail-title .is-online-wrapper .is-online-title {
+    font-size: 20px;
+}
+.game-detail-wrapper .game-detail-title .is-online-wrapper .radio-button-wrapper {
+    font-size: 18px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.game-detail-wrapper .game-detail-title .is-online-wrapper .radio-button-wrapper input {
+    margin-left: 20px;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #ff004c;
+}
+.game-detail-wrapper .game-detail-title .is-online-wrapper .radio-button-wrapper label {
+    cursor: pointer;
+    /* border-bottom: 3px solid #ff004c; */
+}
+
+.image-and-game-detail-wrapper .game-detail-wrapper .link-title {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-and-game-detail-wrapper .game-detail-wrapper .link-title .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0;
+}
+.image-and-game-detail-wrapper .game-detail-wrapper .link-title input {
+    display: none;
+}
+.image-and-game-detail-wrapper .game-detail-wrapper .link-title .upload-button {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 30px;
+    box-sizing: border-box;
+    background-color: #ff004c;
+    color: white;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+.image-and-game-detail-wrapper .game-detail-wrapper .link-title .wait-label {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 500;
+    color: #F47B31;
+    display: none;
+}
+/* .image-and-game-detail-wrapper .game-detail-wrapper .link-title .status.success {
+    color: #29C93A;
+}
+.image-and-game-detail-wrapper .game-detail-wrapper .link-title .status.fail {
+    color: red;
+} */

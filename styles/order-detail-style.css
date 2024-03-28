@@ -1,0 +1,250 @@
+.order-detail-wrapper {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.order-detail-wrapper > div {
+    margin: 0 50px;
+}
+
+
+.screenshot-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    backdrop-filter: brightness(5%);
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.screenshot-wrapper img {
+    width: 450px;
+    height: 900px;
+    height: auto;
+    object-fit: cover;
+    /* outline-offset: 2px;
+    outline-style: dashed;
+    outline-width: 2px;
+    outline-color: #AAAAAA; */
+}
+.screenshot-wrapper .button {
+    width: 450px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.screenshot-wrapper .button i {
+    font-size: 19px;
+    margin-right: 10px;
+}
+.screenshot-wrapper .download-button {
+    background-color: #1DA2F9;
+}
+.screenshot-wrapper .close-button {
+    background-color: white;
+    background: linear-gradient(to right, red, orange);
+    /* color: black; */
+}
+
+.order-detail-wrapper .total-game-wrapper {
+    width: 700px;
+}
+.order-detail-title {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline;
+    /* margin-bottom: 30px; */
+}
+/* .order-detail-wrapper .total-game-wrapper .title span {
+    color: #E31A57;
+    font-weight: bolder;
+} */
+.order-detail-wrapper .total-game-wrapper .game-wrapper {
+    width: 100%;
+    height: 100px;
+    /* box-shadow: 1px 1px 8px 1px rgb(230, 230, 230); */
+    background-color: rgb(20, 20, 20);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+.order-detail-wrapper .total-game-wrapper .game-wrapper img {
+    width: 130px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.order-detail-wrapper .total-game-wrapper .game-wrapper .game-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.order-detail-wrapper .detail-wrapper {
+    width: 500px;
+}
+.order-detail-wrapper .detail-wrapper .title {
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper {
+    /* box-shadow: 1px 1px 8px 1px rgb(230, 230, 230); */
+    border: 1px solid #E5E5E5;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-bottom: 1px dashed #E5E5E5;
+}
+/* .order-detail-wrapper .detail-wrapper .list-wrapper .detail:last-child {
+    border-bottom: none !important;
+    border-bottom-color: white;
+} */
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .type {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .payment-wrapper {
+    display: flex;
+    align-items: center;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .payment-wrapper img {
+    width: 35px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .status {
+    font-weight: bold;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .approved-status {
+    color: #31AB1C;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .pending-status {
+    color: rgb(255, 123, 0);
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .declied-status {
+    color: red;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .image-view-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #1DA2F9;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .image-view-button:hover {
+    background-color: #0196fa;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .detail .value .image-view-button i {
+    margin-right: 10px;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .submit-button {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .approve-button {
+    background-color: #31AB1C;
+    /* background: linear-gradient(to right , #31AB1C , orange); */
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .decline-button {
+    background-color: red;
+}
+.order-detail-wrapper .detail-wrapper .list-wrapper .edit-button {
+    background-color: #0196fa;
+}
+
+
+/* Media queries responsive styles....... */
+@media only screen and (max-width: 1500px) {
+    .order-detail-title {
+        font-size: 25px;
+    }
+    .order-detail-wrapper {
+        margin-top: 20px;
+    }
+    .order-detail-wrapper .total-game-wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .order-detail-title {
+        font-size: 22px;
+    }
+    .order-detail-wrapper .total-game-wrapper .game-wrapper .game-title {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .order-detail-title {
+        font-size: 18px;
+    }
+    .order-detail-wrapper .total-game-wrapper .game-wrapper .game-title {
+        font-size: 14px;
+    }
+    .order-detail-wrapper .total-game-wrapper {
+        width: 100%;
+    }
+    .order-detail-wrapper .detail-wrapper {
+        width: 100%;
+    }
+    .order-detail-wrapper > div {
+        margin: 0 15px;
+    }
+    .screenshot-wrapper {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .screenshot-wrapper img {
+        width: 370px;
+        height: auto;
+    }
+    .screenshot-wrapper .button {
+        width: 100%;
+        height: 45px;
+        min-height: 45px;
+    }
+}

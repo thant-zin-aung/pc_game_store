@@ -1,0 +1,126 @@
+.customer-detail-wrapper {
+    width: 100%;
+    margin-top: 50px;
+    background-color: white;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.customer-detail-wrapper .customer-username {
+    font-size: 25px;
+    font-weight: bold;
+}
+.customer-detail-wrapper .customer-id {
+    font-size: 19px;
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+.customer-detail-wrapper .detail-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.customer-detail-wrapper .detail-wrapper .detail {
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+.customer-detail-wrapper .detail-wrapper .detail .type {
+    font-size: 15px;
+    /* font-weight: 500; */
+    opacity: 0.8;
+}
+.customer-detail-wrapper .detail-wrapper .detail .value {
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.customer-detail-wrapper .login-history-title {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+
+/* Login history table styles....... */
+.customer-table {
+    width: 100%;
+    margin-top: 20px;
+}
+.customer-table tr td , th{
+    border-bottom: 1px solid #E2E2E2;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: left;
+    margin-right: 50px;
+    font-size: 16px;
+}
+.customer-table tr th {
+    border-bottom-color: #CDCDCD;
+    border-bottom-width: 2px;
+    font-weight: 700;
+}
+/* .customer-table tr .status{
+    font-weight: 500;
+    font-size: 14px;
+} */
+.customer-table tr .status {
+    font-weight: bold;
+}
+.customer-table tr .success-status {
+    color: #31AB1C;
+}
+.customer-table tr .failed-status {
+    color: red;
+}
+/* .customer-table .device {
+    width: 400px;
+} */
+
+
+
+
+/* Ordered game list table styles........................... */
+.customer-detail-wrapper .ordered-game-list-title {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+.game-list-table {
+    width: 100%;
+    margin-top: 20px;
+}
+.game-list-table tr td , th{
+    border-bottom: 1px solid #E2E2E2;
+    padding: 5px 0;
+    box-sizing: border-box;
+    text-align: left;
+    margin-right: 50px;
+    font-size: 16px;
+}
+.game-list-table tr th {
+    border-bottom-color: #CDCDCD;
+    border-bottom-width: 2px;
+    font-weight: 700;
+}
+/* .game-list-table tr .status{
+    font-weight: 500;
+    font-size: 14px;
+} */
+.game-list-table tr .status {
+    font-weight: bold;
+}
+.game-list-table tr .success-status {
+    color: #31AB1C;
+}
+.game-list-table tr .failed-status {
+    color: red;
+}
+.game-list-table .game-image {
+    width: 80px;
+    height: 40px;
+    object-fit: cover;
+}
+.game-list-table .game-title {
+    font-weight: 500;
+}
