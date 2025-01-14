@@ -28,6 +28,14 @@
         return $totalCustomer>0 ? true : false;
     }
 
+    function check_if_game_already_exist($connect, $gameTitle) {
+        $gameTitle = str_replace("'","\'",strtolower($gameTitle));
+        $checkGameQuery = "SELECT LOWER('title') FROM game_list WHERE title LIKE '%$gameTitle%'";
+        $checkGameQueryResult = mysqli_query($connect,$checkGameQuery);
+        $totalGame = mysqli_num_rows($checkGameQueryResult);
+        return $totalGame>0 ? true : false;
+    }
+
     function set_and_get_customer_data_to_array($customerData) {
         $customerDataArray = array();
         $customerDataArray['id'] = $customerData['id'];
