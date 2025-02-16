@@ -30,6 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function upload_new_game($data) {
     global $connect;
     $gameTitle = $data['gameTitle'];
+    $developer = $data['developer'];
+    $publisher = $data['publisher'];
     $specificationList = $data['specificationList'];
     $youtubeTrailerLink = $data['youtubeTrailerLink'];
     $downloadLinkList = $data['downloadLinkList'];
@@ -39,8 +41,8 @@ function upload_new_game($data) {
 
     $addGameCondition = true;
     $gameTitle = $gameTitle;
-    $gameDeveloper = '-';
-    $gamePublisher = '-';
+    $gameDeveloper = $developer;
+    $gamePublisher = $publisher;
     $isOnlineGame = "no";
     $imageLinks = explode("\n",$gamePlayImagesList);
     $posterImage = $imageLinks[0];
@@ -76,23 +78,45 @@ function upload_new_game($data) {
 
     $addGameQueryResult = mysqli_query($connect,$addGameQuery);
     $lastGameId = get_last_game_id($connect);
-    $addGameGenreQuery = "INSERT INTO game_genre_list(game_id,genre_id) VALUES($lastGameId, 1)";
-        $addGameGenreQueryResult = mysqli_query($connect,$addGameGenreQuery);
-        if ( !$addGameGenreQuery ) {
-            $addGameCondition = false;
-        }
-    // for ( $count = 0 ; $count < count($genres) ; $count++ ) {
-    //     $addGameGenreQuery = "INSERT INTO game_genre_list(game_id,genre_id) VALUES($lastGameId,$genres[$count])";
+    // $addGameGenreQuery = "INSERT INTO game_genre_list(game_id,genre_id) VALUES($lastGameId, 1)";
     //     $addGameGenreQueryResult = mysqli_query($connect,$addGameGenreQuery);
     //     if ( !$addGameGenreQuery ) {
     //         $addGameCondition = false;
-    //         break;
     //     }
-    // }
+    $genres = get_genre_ids($genreList);
+    for ( $count = 0 ; $count < count($genres) ; $count++ ) {
+        $addGameGenreQuery = "INSERT INTO game_genre_list(game_id,genre_id) VALUES($lastGameId,$genres[$count])";
+        $addGameGenreQueryResult = mysqli_query($connect,$addGameGenreQuery);
+        if ( !$addGameGenreQuery ) {
+            $addGameCondition = false;
+            break;
+        }
+    }
     if ( $addGameQueryResult && $addGameCondition ) {
         return true;
     } else {
         return false;
     }
+}
+
+function get_genre_ids($genres) {
+    global $connect;
+    $genres = array_map('strtolower', $genres);
+    $escapedGenres = array_map(function($genre) use ($connect) {
+        return "'" . mysqli_real_escape_string($connect, $genre) . "'";
+    }, $genres);
+    $placeholders = implode(",", $escapedGenres);
+    $sql = "SELECT id FROM genre_list WHERE LOWER(genre_type) IN ($placeholders)";
+    $result = mysqli_query($connect, $sql);
+    $genre_ids = [];
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $genre_ids[] = $row['id'];
+        }
+    }
+    if (empty($genre_ids)) {
+        $genre_ids = array_rand(array_flip(range(1, 25)), 3);
+    }
+    return $genre_ids;
 }
 ?>
