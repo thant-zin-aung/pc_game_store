@@ -55,13 +55,13 @@ function upload_new_game($data) {
     $specMinProcessor = $specificationList[0]['processor'];
     $specMinMemory = $specificationList[0]['memory'];
     $specMinGraphics = $specificationList[0]['graphics'];
-    $specMinStorage = $downloadSize;
+    $specMinStorage = $downloadSize.' GB';
     $specMinDirectX = "11";
     $specMaxOs = $specificationList[1]['os'];
     $specMaxProcessor = $specificationList[1]['processor'];
     $specMaxMemory = $specificationList[1]['memory'];
     $specMaxGraphics = $specificationList[1]['graphics'];
-    $specMaxStorage = $downloadSize;
+    $specMaxStorage = $downloadSize.' GB';
     $specMaxDirectX = "12"; 
     $downloadLink1 = "";
     $downloadLink2 = $downloadLinkList;
