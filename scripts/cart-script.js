@@ -148,6 +148,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-
-

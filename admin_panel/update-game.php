@@ -78,11 +78,6 @@ function upload_new_game($data) {
 
     $addGameQueryResult = mysqli_query($connect,$addGameQuery);
     $lastGameId = get_last_game_id($connect);
-    // $addGameGenreQuery = "INSERT INTO game_genre_list(game_id,genre_id) VALUES($lastGameId, 1)";
-    //     $addGameGenreQueryResult = mysqli_query($connect,$addGameGenreQuery);
-    //     if ( !$addGameGenreQuery ) {
-    //         $addGameCondition = false;
-    //     }
     $genres = get_genre_ids($genreList);
     for ( $count = 0 ; $count < count($genres) ; $count++ ) {
         $addGameGenreQuery = "INSERT INTO game_genre_list(game_id,genre_id) VALUES($lastGameId,$genres[$count])";
